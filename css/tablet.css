@@ -1,0 +1,389 @@
+/*css for tablets or medium size screens, which is between 600px and 1024px*/
+
+@media (min-width:641px) and (max-width:1000px) {
+    
+    /*--------------------------------The website entire layout--------------------------------*/   
+    
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    
+    /*--------------------------------tablet layout for the entire website--------------------------------*/
+        
+    html{
+        font-family: "Pontano Sans", sans-serif;
+        font-size: 1.5em;
+    }
+    
+    .container{
+        display: grid;
+        grid-template-rows: 30vh 1fr 30vh;    
+    }
+           
+    .content{
+        background-color: #d3d2f7;
+    }
+           
+    .footer, .header{
+        background-image: url(../images/paw-bg.png);
+        background-size: 8vh;
+        background-repeat: repeat;
+    }
+    
+    /*--------------------------------header section--------------------------------*/
+        
+    .logo{
+        margin: 4vh;
+        text-align: center;
+        font-family: "Londrina Shadow", fantasy;
+        text-shadow: 2px 2px 5px rgb(53, 52, 52);
+    }
+    
+    .logo-text span{
+        background-color: #7c7c8a;
+        color: white;
+        padding: 1.3vh;
+        border-radius: 50%;
+    }
+    
+    .nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 7vh;
+        list-style-type: none;
+    }
+    
+    .nav a{
+        padding: 0.1em 1em 0.1em 1em;
+        border-radius: 5px;
+        background-color: #8578b0;
+        color: white;
+    }
+    
+    .nav a.active{
+        border-style: solid;
+        border-color: dimgray;
+    }
+
+    .nav a:hover{
+        border-style: solid;
+        border-color: dimgray;
+    }
+    
+    a:link {
+        text-decoration: none;
+    }
+    
+    /*--------------------------------content section (home): welcome area--------------------------------*/
+        
+    section{
+        padding: 3vh;
+    }
+    
+    .welcome-area{
+        margin: 5vh 0 5vh 0;
+    }
+    
+    h2{
+        margin-bottom: 2vh;
+        text-align: center;
+        color: #433572;
+    }
+        
+    .head{
+        text-align: start;
+    }
+    
+    p{
+        text-align: center;
+    }
+    
+    /*---------------- content section (home): inside content layout for all the blog cards ----------------*/
+        
+    .lat-card, .pop-card, .blog-card{
+        background-color: rgba(66, 64, 167, 0.404);
+        display: grid;
+        grid-template-columns: 1vh 1fr 1vh;
+        grid-template-rows: 35vh 1vh 0.2fr 3vh 1vh 1fr 1vh 5vh 1vh;
+        color: rgb(233, 233, 233);
+    }
+    
+    .lat-img-holder, .pop-img-holder, .blog-img.holder{
+        grid-area: 1/1/2/5;
+    }
+    
+    .lat-head, .pop-head, .blog-head{
+        grid-area:3/2/4/3;
+        align-self: flex-end;
+    }
+    
+    .lat-date, .pop-date, .blog-date{
+        grid-area: 4/2/5/3;
+    }
+        
+    .lat-descrip, .pop-descrip, .blog-descrip{
+        grid-area: 6/2/7/3;
+        text-align: justify;
+    }
+    
+    .lat-read, .pop-read, .blog-read{
+        grid-area: 8/2/9/3;
+        background-color: #433572;
+        color: rgb(233, 233, 233);
+        text-align: center;
+        padding: 6px;
+    }
+
+    .lat-read:hover, .pop-read:hover, .blog-read:hover{
+        box-shadow: 2px 2px 8px #1b1336;
+    }
+    
+    /*--------------------------------content section (home): position of the popular blogs--------------------------------*/
+        
+    .pop-section, .blog-section{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .pop-card, .blog-card{
+        margin-bottom: 3vh;
+    }
+    
+    /*--------------------------------image replacement (home)--------------------------------*/
+        
+    #lat-img, #blog-img1{
+        background-image: url("../images/blog-images/fluffy.jpg");
+        background-size: cover;
+        background-position-x: center;
+    }
+    
+    #pop-img1, #blog-img2{
+        background-image: url("../images/blog-images/cats.jpg");
+        background-size: cover;
+        background-position-y: 40%;
+    }
+        
+    #pop-img2, #blog-img3{
+        background-image: url("../images/blog-images/peanut.jpg");
+        background-size: cover;
+        background-position-y: 40%;
+    }
+        
+    #pop-img3, #blog-img4{
+        background-image: url("../images/blog-images/lucky.jpg");
+        background-size: cover;
+        background-position-y: 25%;
+    }
+        
+    /*--------------------------------about page--------------------------------*/
+
+    .about-section{
+        margin: 10px;
+        text-align: center;
+    }
+    
+    .about-img{
+        width: 40vh;
+        margin: 20px;
+    }
+
+    /*--------------------------------blog page order--------------------------------*/
+
+    #b1{
+        order: 1;
+    }
+
+    #b2{
+        order: 4;
+    }
+
+    #b3{
+        order: 3;
+    }
+
+    #b4{
+        order: 2;
+    } 
+        
+    /*--------------------------------blog post layout--------------------------------*/
+    
+     .post-layout{
+        display: grid;
+        grid-template-rows: 5vh 12vh 8vh 50vh 13vh 1fr;
+        margin: 1em;
+    }
+
+    .article-link{
+        font-size: 0.8em;
+        color: lightslategray;
+    }
+
+    .article-link a {
+        color: lightslategray;
+        text-decoration: underline;
+    }
+
+    .post-layout h2{
+        grid-area: 2/0/3/0;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    
+    .post-layout p{
+        grid-area: 6/0/7/0;
+        text-align: left;
+        margin-bottom: 1em;
+    } 
+    
+    .post-date{
+        grid-area: 3/0/4/0;
+        font-size: 0.9em;
+        padding: 10px;
+        color: grey;
+        display: flex;
+        justify-content: center;
+    }
+
+    /*blog images*/
+    .post-img-holder{
+        grid-area: 4/0/5/0;
+        width: 100%;
+    }
+
+    #post-img1{
+        background-image: url(../images/blog-images/cats.jpg);
+        background-size: cover;
+        background-position-y: 40%;
+    }
+
+    #post-img2{
+        background-image: url(../images/blog-images/peanut.jpg);
+        background-size: cover;
+        background-position-y: 40%;
+    }
+
+    #post-img3{
+        background-image: url(../images/blog-images/lucky.jpg);
+        background-size: cover;
+        background-position-y: 20%;
+    }
+
+    #post-img4{
+        background-image: url(../images/blog-images/fluffy.jpg);
+        background-size: cover;
+        background-position-y: center;
+    }
+
+    .img-cap{
+        grid-area: 5/0/6/0;
+        text-align: center;
+        padding: 10px;
+        color: grey;
+    }
+
+    /*author section*/
+    .author-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 1em;
+    }
+
+    .author{
+        grid-area: 0/2/0/3;
+        margin-top: 5em;
+        padding: 10px;
+        width: 20em;
+        background-color: lightgray;
+        border-style: double;
+    }
+
+    .author h3{
+        margin-bottom: 1em;
+        text-align: center;
+    }
+
+    .author em{
+        font-size: 0.8em;
+    }
+
+    .author p{
+        text-align: left;
+        margin-bottom: 1em;
+    }
+
+    .author .social-group{
+        float: right;
+        text-align: right;
+    }
+
+    .avatar{
+        width: 20vh;
+        border-radius: 50%;
+        margin-left: 35%;
+        margin-bottom: 1em;
+    }
+
+    /*--------------------------------footer section--------------------------------*/
+
+    .footer-items{
+        margin: 10px;
+    }
+
+    .footer-logo{
+        font-family: "Londrina Shadow", fantasy;
+        font-size: 1.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+    }
+
+    .social-group{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin: 10px;
+    }
+
+    .social{
+        width: 4vh;
+        padding: 6px;
+    }
+    
+    .subscribe-form{
+        text-align: center;
+    }
+
+    .subscribe-header{
+        text-shadow: 0 0 10px rgb(56, 47, 117);
+        font-size: 1em;
+    }
+
+
+    .subscribe-header, .subscribe-email, .subscribe-button{
+        display: inline-block;
+        margin: 5px;
+        
+    }
+    
+    input[type=text], input[type=submit]{
+        padding: 0.5em;
+    }
+
+    input[type=submit]{
+        background-color:white;
+        background-color: rgb(56, 47, 117);
+        color: white;
+    }
+
+    input[type=submit]:hover{
+        color: rgb(56, 47, 117);
+        background-color: white;
+        border: 1px solid rgb(56, 47, 117);
+    }
+}

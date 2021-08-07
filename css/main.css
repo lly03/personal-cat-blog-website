@@ -1,0 +1,5 @@
+
+/*dividing the css styles with types of screen sizes*/
+@import url(mobile.css);
+@import url(tablet.css);
+@import url(desktop.css);
