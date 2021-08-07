@@ -208,12 +208,6 @@
     } 
         
     /*--------------------------------blog post layout--------------------------------*/
-    
-     .post-layout{
-        display: grid;
-        grid-template-rows: 5vh 12vh 8vh 50vh 13vh 1fr;
-        margin: 1em;
-    }
 
     .article-link{
         font-size: 0.8em;
@@ -225,61 +219,52 @@
         text-decoration: underline;
     }
 
+    .post-layout{
+        display: grid;
+        grid-template-rows: 15vh 8vh 50vh 1fr 115vh;
+        margin: 1em;
+    }
+
     .post-layout h2{
-        grid-area: 2/0/3/0;
+        grid-area: 1/0/2/0;
         display: flex;
         flex-direction: row;
         align-items: flex-end;
         justify-content: center;
     }
-    
-    .post-layout p{
-        grid-area: 6/0/7/0;
-        text-align: left;
-        margin-bottom: 1em;
-    } 
-    
+
     .post-date{
-        grid-area: 3/0/4/0;
+        grid-area: 2/0/3/0;
         font-size: 0.9em;
         padding: 10px;
         color: grey;
         display: flex;
         justify-content: center;
     }
+    
+    .post-layout p{
+        text-align: left;
+    }
+
+    .post-descrip{
+        grid-area: 4/0/5/0;
+        text-align: left;
+    } 
 
     /*blog images*/
-    .post-img-holder{
-        grid-area: 4/0/5/0;
+    .post-img{
+        grid-area: 3/0/4/0;
+    }
+
+    figure img{
+        grid-area: 3/0/4/0;
         width: 100%;
+        height: 40vh;
+        object-fit: cover;
+        object-position: center 35%;
     }
 
-    #post-img1{
-        background-image: url(../images/blog-images/cats.jpg);
-        background-size: cover;
-        background-position-y: 40%;
-    }
-
-    #post-img2{
-        background-image: url(../images/blog-images/peanut.jpg);
-        background-size: cover;
-        background-position-y: 40%;
-    }
-
-    #post-img3{
-        background-image: url(../images/blog-images/lucky.jpg);
-        background-size: cover;
-        background-position-y: 20%;
-    }
-
-    #post-img4{
-        background-image: url(../images/blog-images/fluffy.jpg);
-        background-size: cover;
-        background-position-y: center;
-    }
-
-    .img-cap{
-        grid-area: 5/0/6/0;
+    figcaption{
         text-align: center;
         padding: 10px;
         color: grey;
@@ -294,10 +279,10 @@
     }
 
     .author{
-        grid-area: 0/2/0/3;
         margin-top: 5em;
         padding: 10px;
         width: 20em;
+        height: max-content;
         background-color: lightgray;
         border-style: double;
     }
